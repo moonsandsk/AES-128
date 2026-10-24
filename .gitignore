@@ -1,0 +1,35 @@
+# Vivado / xsim
+vivado_proj/
+.Xil/
+*.jou
+*.log
+!vivado-fpga/results/*.txt
+*.str
+*.backup.*
+xsim.dir/
+*.wdb
+*.pb
+webtalk*
+usage_statistics_webtalk.*
+*.cache/
+*.hw/
+*.ip_user_files/
+*.runs/
+*.sim/
+*.gen/
+
+# Icarus Verilog
+*.vvp
+*.vcd
+
+# Python
+__pycache__/
+*.pyc
+venv/
+.venv/
+python-vault/password_vault.json
+
+# OS / editors
+.DS_Store
+Thumbs.db
+.vscode/
