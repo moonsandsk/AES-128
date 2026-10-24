@@ -90,10 +90,6 @@ python main.py
 ```
 
 ## Future work
-
-- On-board verification with the test table above.
-- Show the full 128-bit ciphertext on the 7-segment display or over USB-UART.
-- Load the key over UART instead of fixing it at synthesis (`STATIC_KEY = 0`).
 - A decryption path, and integration as an AXI peripheral for a MicroBlaze system.
 
 ## References
