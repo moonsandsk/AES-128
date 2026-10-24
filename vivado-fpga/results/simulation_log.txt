@@ -1,0 +1,44 @@
+==============================================================
+ AES-128 pipelined engine - Basys 3 testbench
+==============================================================
+[315000] PASS : leds after reset = 0x00
+--- A1: sw = 0x55 (plaintext 128'h5555...55) ---
+[626000] PASS : plaintext  (sw=0x55) = 55555555555555555555555555555555
+[626000] PASS : ciphertext (sw=0x55) = c985043655121fdf1f87fbce7c7ca451
+[626000] PASS : leds       (sw=0x55) = 0x51
+[626000] PASS : busy_led after done = 0x00
+[626000] PASS : done_led after done = 0x01
+        LSB = 0x51 (note: 0x79 is NOT the AES-128 result for this key/plaintext)
+--- A2: additional plaintext bytes ---
+[1086000] PASS : plaintext  (sw=0xa3) = a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3
+[1086000] PASS : ciphertext (sw=0xa3) = 04b78440a7e7406597beca0dab5af9c2
+[1086000] PASS : leds       (sw=0xa3) = 0xc2
+[1086000] PASS : busy_led after done = 0x00
+[1086000] PASS : done_led after done = 0x01
+[1546000] PASS : plaintext  (sw=0x00) = 00000000000000000000000000000000
+[1546000] PASS : ciphertext (sw=0x00) = 7df76b0c1ab899b33e42f047b91b546f
+[1546000] PASS : leds       (sw=0x00) = 0x6f
+[1546000] PASS : busy_led after done = 0x00
+[1546000] PASS : done_led after done = 0x01
+[2006000] PASS : plaintext  (sw=0xff) = ffffffffffffffffffffffffffffffff
+[2006000] PASS : ciphertext (sw=0xff) = 8af2860142f786f409307c1a3f7eaaac
+[2006000] PASS : leds       (sw=0xff) = 0xac
+[2006000] PASS : busy_led after done = 0x00
+[2006000] PASS : done_led after done = 0x01
+--- A3: reset asserted mid-encryption ---
+[2565000] PASS : busy_led during reset = 0x00
+[2565000] PASS : done_led during reset = 0x00
+[2965000] PASS : aborted block produced no output
+[2965000] PASS : leds after abort = 0x00
+[3276000] PASS : plaintext  (sw=0x55) = 55555555555555555555555555555555
+[3276000] PASS : ciphertext (sw=0x55) = c985043655121fdf1f87fbce7c7ca451
+[3276000] PASS : leds       (sw=0x55) = 0x51
+[3276000] PASS : busy_led after done = 0x00
+[3276000] PASS : done_led after done = 0x01
+--- B1: core streaming, 32 vectors back-to-back, per-block keys ---
+[3935000] PASS : core produced 32/32 correct results at 1 block/clock
+--- B2: core streaming with random bubbles ---
+[4525000] PASS : core produced 32/32 correct results with bubbles
+==============================================================
+ TEST PASSED : 175 checks, 0 errors
+==============================================================
