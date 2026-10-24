@@ -3,8 +3,7 @@
 A fully pipelined, synthesizable AES-128 encryption engine for the Digilent Basys 3 (Xilinx Artix-7, `xc7a35tcpg236-1`), built and verified in Vivado 2025.1.
 
 **Authors:** Aditi Chandra and Akanksha Venkatesh
-**Course:** Machine Intelligence for Chip Security and Hardware Trust, Department of ECE, PES University
-**Guide:** Prof. Nirmala Devi M
+
 
 ## Results
 
